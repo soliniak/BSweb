@@ -1,0 +1,106 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: red; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+#header {
+  width: 25%;
+  height: 100%;
+  background: #000;
+  background-position: 0 0;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+#header-bg {
+  background-color: rgba(9, 157, 179, 0.5);
+  background-image: linear-gradient(to bottom, rgba(255, 0, 124, 0.6), #099db3);
+  height: 100%; }
+
+#header-inner {
+  background-image: url(img/header_bg_default.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  position: relative;
+  height: 100%;
+  animation: inner-bg 70s infinite linear;
+  padding: 1px 50px 0 50px; }
+@keyframes inner-bg {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -500px 0; } }
+.logo {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding-top: 72px;
+  font-size: 30px;
+  margin: 0 auto; }
+
+.header-menu {
+  text-align: right;
+  font-size: 20px;
+  padding-top: 50px;
+  overflow: hidden; }
+  .header-menu ul li {
+    position: relative; }
+    .header-menu ul li a {
+      position: relative;
+      right: 0;
+      text-decoration: none;
+      color: #fff;
+      transition: all 300ms; }
+    .header-menu ul li a:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin: 0 10px 0 0;
+      width: 300px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2); }
+    .header-menu ul li a:hover {
+      right: 10px; }
+
+.current-menu-item span a {
+  color: #edcf56 !important; }
+
+.header-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  background-color: rgba(9, 157, 179, 0.5); }
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  clear: both;
+  height: 0;
+  content: ""; }
+
+.menu-item {
+  padding: 10px 0 0 0; }
+
+nav ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  font-family: Arial; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*# sourceMappingURL=style.css.map */
