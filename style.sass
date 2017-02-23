@@ -177,9 +177,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .main-content
 	background: #fff
 	//box-shadow: 0px 13px 16px -7px rgba(0,0,0,0.31)
-	border-bottom: 1px solid #eee
-	padding: 20px
-		
+	//border-bottom: 1px solid #eee
+	padding: 80px 100px 0 100px
+
+.add-padding
+	@extend .main-content
+	border: 0
 
 .section-title
 	display: block
@@ -189,41 +192,81 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		border-bottom: 1px solid red
 		border-width: 80%
 
-.separator
-	//height: 10px
-	//width: 100%
 
-.slider
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: 0 0
-	display: block
-	height: 100%
-	width: 100%
+// --- SLIDER START
 
 .baner
 	position: relative
 	overflow: hidden
+	width: 100%
+	height: 600px
+	margin-bottom: 20px
 	.baner-description
-		height: 80px
+		height: 60px
 		width: 100%
 		position: absolute
-		bottom: 0
-		background-color: rgba(255,255,255,0.7)
+		bottom: 2px
+		background-color: rgba(255,255,255,0.85)
 		display: flex
 		justify-content: space-around
 		align-items: center
 
+.baner-description
+	h1
+		@extend h1
+		padding: 0 15px
+.slides
+	display: block
+	width: 8000px
+	height: 100%
+	margin: 0
+	padding: 0
 
-.baner
-	display: inline-block
-	min-width: 100%
-	.baner-img
-		background-size: cover
-		background-position: center
-		background-repeat: no-repeat
-		width: 100%
-		height: 640px
+.slide
+	height: 500px
+	width: 1400px
+	float: left
+
+.baner-progressbar
+	display: block
+	height: 2px
+	width: 0
+	position: absolute
+	bottom: 0
+	background: linear-gradient(-90deg, #CC2C81, #935A9B)
+
+// --- SLIDER END
+
+
+// --- GALLERY ON MAIN PAGE - FULL WIDTH SECTION
+
+
+//.gallery
+//	width: 100%
+//	display: flex
+//	align-items: center
+//	justify-content: space-between
+//	flex-direction: row
+//	//margin-bottom: 50px
+//	.gallery-section
+//		height: 200px
+//		overflow: hidden
+//		img
+//			width: 300px
+
+.gallery
+	width: 100%
+	overflow: hidden
+	display: block
+	ul.gallery-slider-container
+		width: 300 * 8px
+		li.gallery-section
+			float: left
+			width: 300px
+			height: 200px
+
+// --- END GALLERY
+
 
 .description
 	letter-spacing: 1px
@@ -252,20 +295,7 @@ h3
 	line-height: 21px
 
 
-.baner-description
-	h1
-		@extend h1
-		padding: 0 15px
-
-.baner-progressbar
-	display: block
-	height: 13px
-	width: 100%
-	position: absolute
-	bottom: 0
-	background-color: rgba(230, 0, 0, 0.5)
-
-.testimonial
+.testimonial, .full-width-section
 	width: 100%
 	height: auto
 
@@ -293,12 +323,6 @@ h3
 			background-image: linear-gradient(to bottom, rgba(9,157,179,0.7),transparent)
 
 
-.float-right
-	float: right
-
-.right-padding
-	padding-right: 20px
-
 .simple-button
 	border: 1px solid red
 	border-radius: 5px 0 5px 0
@@ -317,14 +341,20 @@ h3
 		background-color: rgb(258, 248, 248)
 
 .click-anim-button
-	//transform: translate(0, 1px)
-	margin-top: 1px
+	transform: translate(0, 1px)
 	border: 1px solid rgba(255, 0, 0, .3)
-	box-shadow: none !important
+	box-shadow: 0 0 0 0 rgba(0,0,0,0)
 
 .reset-padding
 	padding: 0 !important
 	margin: 0 !important
+
+
+.reset-side-padding
+	padding-left: 0
+	padding-right: 0
+	margin-left: 0
+	margin-right: 0
 
 .newsletter
 	height: 300px
@@ -347,8 +377,8 @@ h3
 	color: #fff
 
 .form-fields
-	height: 40px
-	width: 300px
+	height: 60px
+	width: 350px
 	background-color: rgba(0, 0 ,0 , 0.8)
 	border: 0px solid transparent
 	border-radius: 5px 0 5px 0
@@ -356,9 +386,8 @@ h3
 	margin-top: 20px
 	padding: 20px
 	display: flex
-	align-content: center
-	justify-content: center
 	align-items: center
+	justify-content: center
 
 
 input.input-newsletter
@@ -378,11 +407,21 @@ input.input-newsletter:focus
 button:focus
 	outline: 0
 
+
+.float-right
+	float: right
+
+.right-padding
+	padding-right: 20px
+
 em
 	font-style: italic
 	font-weight: lighter
 	display: block
 	margin-bottom: 15px
+ul, li
+	list-style-type: none
+
 nav
 	ul
 		li
@@ -398,6 +437,17 @@ a, i
 	text-decoration: none
 	transition: all 250ms ease-in-out
 
+input:focus::-webkit-input-placeholder
+	color: transparent
+input:focus:-moz-placeholder /* FF 4-18 */
+	color: transparent
+input:focus::-moz-placeholder /* FF 19+ */
+	color: transparent
+input:focus:-ms-input-placeholder /* IE 10+ */
+	color: transparent
+
+
+// -------- MAX WIDTH 1800
 
 @media (max-width: 1800px)
 	#header
@@ -407,6 +457,9 @@ a, i
 	.header-navigation
 		width: 90%
 		margin: 0 auto
+
+
+// -------- MAX WIDTH 1199
 
 @media (max-width: 1199px)
 	#header

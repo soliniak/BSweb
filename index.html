@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="normalize.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="script.js"></script>
+	<script src="slider.js"></script>
 </head>
 	<script src="https://use.fontawesome.com/7b0f8a4daa.js"></script>
 <body>
@@ -66,16 +67,24 @@
 	</header>
 	<div class="wrapper">
 		<div class="main-container">
-			<div class="baner">
-				<div class="baner-img" style="background-image: url(img/slide_01.jpg);"></div>
+			<div class="baner" id="slider">
+				<ul class="slides">
+					<li class="slide"><img src="img/slide_01.jpg" /></li>
+					<li class="slide"><img src="img/slide_02.jpg" /></li>
+					<li class="slide"><img src="img/slide_03.jpg" /></li>
+					<li class="slide"><img src="img/slide_01.jpg" /></li>
+				</ul>
 				<div class="baner-description">
 					<h3> First Description </h3>
 					<h3> Second Description </h3>
 					<h3> Third Description</h3>
 				</div>
-					<!-- <div class="baner-progressbar"></div> -->
+					<div class="baner-progressbar"></div>
 			</div>
 			<div class="content">
+
+<!-- FIRST SECTION -->
+
 					<section class="main-content">
 						<div class="section-title">
 							<h1> Section title </h1>
@@ -96,8 +105,69 @@
 						</p>
 			 		</section>
 			 			<div class="separator"></div>
+
+<!-- TESTIMONIAL SECTION -->
+
 			 		<section class="main-content">
-							<div class="section-title">
+				 		<div class="testimonial">
+				 			<div class="section-title">
+					 			<h1> OUR CLIENTS </h1><span class="float-right right-padding"><button class="simple-button">See testimonials</button></span>
+					 			<em> Read why they love us so much </em>
+					 		</div>
+				 			<div class="testimonial-content">
+					 			<div>
+						 			<p class="testimonial-portrait">
+						 				<span>
+						 					<img src="img/client_01.jpg">
+						 				</span>
+						 			</p>
+						 				<blockquote>
+							 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+							 			</blockquote>
+							 	</div>
+				 			</div>
+				 		</div>
+			 		</section>
+			 		<div class="separator"></div>
+
+<!-- GALLERY SECTION -->
+
+			 		<section class="main-content reset-padding">
+				 		<div class="full-width">
+				 			<div class="section-title add-padding">
+					 			<h1> GALLERY </h1><span class="float-right right-padding"><button class="simple-button">enter gallery</button></span>
+					 			<em>  dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							 			tempor incididunt ut labore </em>
+					 		</div>
+					 		<div class="gallery">
+					 		<ul class="gallery-slider-container">
+					 			<li class="gallery-section"><img src="img/gallery_01.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_02.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_03.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_04.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_05.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_06.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_07.jpg" alt="" /></li>
+					 			<li class="gallery-section"><img src="img/gallery_08.jpg" alt="" /></li>
+					 		</ul>
+					 		<button class="gallery-slider-prev simple-button"> Prev </button><button class="gallery-slider-next simple-button"> Next </button>
+					 		<!--
+					 			<div class="gallery-section"><img src="img/gallery_01.jpg" alt="" /></div>
+					 			<div class="gallery-section"><img src="img/gallery_02.jpg" alt="" /></div>
+					 			<div class="gallery-section"><img src="img/gallery_03.jpg" alt="" /></div>
+					 			<div class="gallery-section"><img src="img/gallery_04.jpg" alt="" /></div>
+					 		-->
+					 		
+					 		</div>
+				 		</div>
+			 		</section>
+			 			<div class="separator"></div>
+
+<!-- Lorem SECTION -->
+
+					<section class="main-content">
+						<div class="section-title">
 							<h1> Section title </h1>
 							<em>Description or quote under the title</em>
 						</div>
@@ -116,29 +186,10 @@
 						</p>
 			 		</section>
 			 			<div class="separator"></div>
-			 		<section class="main-content">
-				 		<div class="testimonial">
-				 			<div class="section-title">
-					 			<h1> OUR CLIENTS </h1><span class="float-right right-padding"><button class="simple-button">Button</button></span>
-					 			<em> Read why they love us so much </em>
-					 		</div>
-				 			<div class="testimonial-content">
-					 			<div>
-						 			<p class="testimonial-portrait">
-						 				<span>
-						 					<img src="img/client_01.jpg">
-						 				</span>
-						 			</p>
-						 				<blockquote>
-							 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-							 			</blockquote>
-							 	</div>
-				 			</div>
-				 		</div>
-			 		</section>
-			 			<div class="separator"></div>
-					<section class="main-content reset-padding">
+
+<!-- NEWSLETTER SECTION -->
+
+					<section class="main-content reset-side-padding">
 					<div class="newsletter" style="background-image: url(img/bottom_bg.jpg);">
 						<div class="newsletter">
 							<div class="col">
@@ -158,7 +209,6 @@
 						</div>
 					</div>
 			 		</section>
-						<div class="separator"></div>
 			</div>
 		</div>
 	</div>
