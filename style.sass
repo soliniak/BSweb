@@ -193,7 +193,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		border-width: 80%
 
 
-// --- SLIDER START
+// --- TOP SLIDER START
 
 .baner
 	position: relative
@@ -201,6 +201,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	width: 100%
 	height: 600px
 	margin-bottom: 20px
+
 	.baner-description
 		height: 60px
 		width: 100%
@@ -224,7 +225,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .slide
 	height: 500px
-	width: 1400px
+	width: 1200px
 	float: left
 
 .baner-progressbar
@@ -235,10 +236,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	bottom: 0
 	background: linear-gradient(-90deg, #CC2C81, #935A9B)
 
-// --- SLIDER END
+// --- TOP SLIDER END
 
 
-// --- GALLERY ON MAIN PAGE - FULL WIDTH SECTION
+// --- GALLERY IN SECTION - FULL WIDTH 
 
 
 //.gallery
@@ -259,12 +260,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	overflow: hidden
 	display: block
 	ul.gallery-slider-container
-		width: 300 * 8px
 		li.gallery-section
 			float: left
-			width: 300px
-			height: 200px
 
+.drivers-section-gallery
+	margin: 5px 0 0 0 
+	text-align: center
+	display: block
+	width: 100%
+	height: 50px
 // --- END GALLERY
 
 
@@ -311,16 +315,18 @@ h3
 .testimonial-portrait
 	display: inline
 	float: left
-	padding: 15px
+	padding: 15px 30px 15px 0
+	margin-top: 10px
 	span
 		img
+			position: relative
 			height: 120px
 			width: 120px
-			padding: 5px
+			padding: 2px
 			border: 0px solid transparent
 			border-radius: 50%
 			background-color: #ff007c
-			background-image: linear-gradient(to bottom, rgba(9,157,179,0.7),transparent)
+			background-image: linear-gradient(to top, rgba(9,157,179,0.7),transparent)
 
 
 .simple-button
@@ -339,6 +345,8 @@ h3
 	&:hover
 		color: red
 		background-color: rgb(258, 248, 248)
+	&:disabled
+		opacity: .5
 
 .click-anim-button
 	transform: translate(0, 1px)
