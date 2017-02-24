@@ -57,7 +57,8 @@ $(function(){
 	var $picSection = $sectionSlider.find('.gallery-section');
 	var amount = 4;
 	var placer = 1;
-
+	var speed = 500;
+	
 	var picWidth = $gallerySection.width() / amount;
 	var ulGalSlider = picWidth * $picSection.length;
 	var clicks = $picSection.length - amount + 1;
@@ -65,21 +66,42 @@ $(function(){
 	$sectionSlider.css('width', ulGalSlider);
 	$picSection.css('width', picWidth);
 
-	$leftBtn.click(function(){
+
+	function left(){
 		placer++;
-		$sectionSlider.animate({'margin-left': '-='+picWidth}, 1000);
+		$sectionSlider.animate({'margin-left': '-='+picWidth}, speed);
 		$rightBtn.attr("disabled", false);
 		if(placer >= clicks){
 			$leftBtn.attr("disabled", true);
 		}
-	});
+	};
 
-	$rightBtn.click(function(){
+	function right(){
 		placer--;
-		$sectionSlider.animate({'margin-left': '+='+picWidth}, 1000);
+		$sectionSlider.animate({'margin-left': '+='+picWidth}, speed);
 		$leftBtn.attr("disabled", false);
 		if(placer <= "1"){
 			$rightBtn.attr("disabled", true);
 		}
+	};
+
+	$sectionSlider.on("mousedown", function () {
+	    $(this).addClass("mdown");
+	}).on("mouseup", function () {
+	    $(this).removeClass("mdown");
+	});
+
+	$sectionSlider.on("swipeleft", function(){
+		if(placer <= (clicks - 1)) left();
+	}).on("swiperight", function(){
+		if(placer > 1 ) right();
+	});
+
+	$leftBtn.click(function(){
+		left();
+	});
+
+	$rightBtn.click(function(){
+		right();
 	});
 });

@@ -1,8 +1,6 @@
-body {
-  margin: 0 auto;
-  padding: 0; }
-
-html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -84,9 +82,57 @@ html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3
   left: 0;
   right: 0;
   bottom: 0;
-  height: 75px;
+  height: 350px;
   width: 100%;
   background-color: rgba(9, 157, 179, 0.5); }
+
+.header-footer-contact {
+  margin-top: 60px;
+  height: 150px; }
+  .header-footer-contact ul {
+    padding: 0 60px; }
+
+.abc {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+.appointment-button {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px; }
+
+.li-fcontact {
+  float: left;
+  font-weight: bold;
+  color: #fff;
+  width: 40%;
+  line-height: 2em;
+  font-size: 13px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  position: relative; }
+  .li-fcontact:nth-child(odd) {
+    clear: left;
+    margin-right: 20px; }
+  .li-fcontact i.fa {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-size: 20px; }
+  .li-fcontact dl dt {
+    clear: left;
+    float: left;
+    width: 40%;
+    display: inline-block; }
+  .li-fcontact dl dd {
+    display: inline-block;
+    width: 60%;
+    float: left; }
 
 .clearfix:before, .clearfix:after {
   display: table;
@@ -100,9 +146,9 @@ html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3
 .header-social {
   padding: 0 10%; }
   .header-social ul {
-    position: relative;
-    padding: 0 5px;
-    float: left; }
+    position: absolute;
+    bottom: 30px;
+    padding: 0 5px; }
     .header-social ul li {
       display: inline-block;
       border: 0px solid transparent; }
@@ -156,7 +202,8 @@ html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3
 .content {
   width: 100%;
   height: 100%;
-  display: block; }
+  display: block;
+  overflow: hidden; }
 
 .main-content, .add-padding {
   background: #fff;
@@ -201,7 +248,7 @@ html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3
 
 .slide {
   height: 500px;
-  width: 1200px;
+  width: auto;
   float: left; }
 
 .baner-progressbar {
@@ -216,8 +263,13 @@ html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3
   width: 100%;
   overflow: hidden;
   display: block; }
+  .gallery:hover {
+    cursor: -webkit-grab; }
   .gallery ul.gallery-slider-container li.gallery-section {
     float: left; }
+
+.mdown {
+  cursor: -webkit-grabbing; }
 
 .drivers-section-gallery {
   margin: 5px 0 0 0;
@@ -384,7 +436,10 @@ nav ul li {
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  pointer-events: none; }
+  img::selection {
+    background: transparent; }
 
 a, i {
   text-decoration: none;
@@ -411,7 +466,22 @@ input:focus:-ms-input-placeholder {
 
   .header-navigation {
     width: 90%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .li-fcontact {
+    width: 30%;
+    line-height: 2em;
+    font-size: 10px;
+    padding-left: 20px; }
+    .li-fcontact i.fa {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      font-size: 15px; }
+    .li-fcontact dl dt {
+      width: 35%; }
+    .li-fcontact dl dd {
+      width: 65%; } }
 @media (max-width: 1199px) {
   #header {
     width: 100%;

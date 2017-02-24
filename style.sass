@@ -1,14 +1,15 @@
-body
-	margin: 0 auto
-	padding: 0
-	
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, 
+output, ruby, section, summary, time, mark, audio, video, button
 	margin: 0
 	padding: 0
 	border: 0
 	font-size: 100%
 	font: inherit
 	vertical-align: baseline
+
+
+
 
 // --- MENU START
 
@@ -25,6 +26,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	//border-radius: 0 15px 15px 0
 	overflow: hidden
 	z-index: 1
+
+//.last
+//	position: relative
+//	bottom: -50px
 
 #header-bg
 	background-color: rgba(9,157,179,0.5)
@@ -95,9 +100,59 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	left: 0
 	right: 0
 	bottom: 0
-	height: 75px
+	height: 350px
 	width: 100%
 	background-color: rgba(9,157,179,0.5)
+
+.header-footer-contact
+	margin-top: 60px
+	height: 150px
+	ul
+		padding: 0 60px
+
+.abc
+	width: 100%
+	display: flex
+	align-content: center
+	justify-content: center
+
+.appointment-button
+	width: 250px
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: -20px
+
+.li-fcontact
+	float: left
+	font-weight: bold
+	color: #fff
+	width: 40%
+	//border: 1px solid red
+	line-height: 2em
+	font-size: 13px
+	padding-left: 30px
+	margin-bottom: 30px
+	position: relative
+	&:nth-child(odd)
+		clear: left
+		margin-right: 20px
+	i.fa
+		position: absolute
+		top: 2px
+		left: 0
+		font-size: 20px
+	dl
+		dt
+			clear: left
+			float: left
+			width: 40%
+			display: inline-block
+		dd
+			display: inline-block
+			width: 60%
+			float: left
 
 .clearfix:before, .clearfix:after
 	display: table
@@ -111,9 +166,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .header-social
 	padding: 0 10%
 	ul
-		position: relative
+		position: absolute
+		bottom: 30px
 		padding: 0 5px
-		float: left
 		li
 			display: inline-block
 			border: 0px solid transparent
@@ -172,7 +227,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	width: 100%
 	height: 100%
 	display: block
-
+	overflow: hidden
 
 .main-content
 	background: #fff
@@ -225,7 +280,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .slide
 	height: 500px
-	width: 1200px
+	width: auto
 	float: left
 
 .baner-progressbar
@@ -259,9 +314,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	width: 100%
 	overflow: hidden
 	display: block
+	
+	&:hover
+		cursor: -webkit-grab
 	ul.gallery-slider-container
 		li.gallery-section
 			float: left
+
+.mdown
+	cursor: -webkit-grabbing
 
 .drivers-section-gallery
 	margin: 5px 0 0 0 
@@ -440,6 +501,9 @@ nav
 img
 	max-width: 100%
 	height: auto
+	pointer-events: none
+	&::selection
+		background: transparent
 
 a, i
 	text-decoration: none
@@ -455,7 +519,7 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 	color: transparent
 
 
-// -------- MAX WIDTH 1800
+// -------- MAX WIDTH 1800 zakres od 1199 -> 1800
 
 @media (max-width: 1800px)
 	#header
@@ -465,9 +529,26 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 	.header-navigation
 		width: 90%
 		margin: 0 auto
+	.li-fcontact
+		width: 30%
+		line-height: 2em
+		font-size: 10px
+		padding-left: 20px
+		i.fa
+			position: absolute
+			top: 2px
+			left: 0
+			font-size: 15px
+		dl
+			dt
+				width: 35%
+
+			dd
+				width: 65%
 
 
-// -------- MAX WIDTH 1199
+
+// -------- MAX WIDTH 1199 zakres od 0 -> 1199
 
 @media (max-width: 1199px)
 	#header
