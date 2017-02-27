@@ -84,11 +84,13 @@ output, ruby, section, summary, time, mark, audio, video, button {
   bottom: 0;
   height: 350px;
   width: 100%;
-  background-color: rgba(9, 157, 179, 0.5); }
+  background-color: rgba(9, 157, 179, 0.5);
+  transition: all 1s ease-in-out; }
 
 .header-footer-contact {
   margin-top: 60px;
-  height: 150px; }
+  height: 150px;
+  transition: all 1s ease-in-out; }
   .header-footer-contact ul {
     padding: 0 60px; }
 
@@ -182,6 +184,9 @@ output, ruby, section, summary, time, mark, audio, video, button {
 
 .rwd-menu-anchor {
   visibility: hidden; }
+
+.open-up {
+  display: none; }
 
 .wrapper {
   margin-left: 30%;
@@ -518,5 +523,44 @@ input:focus:-ms-input-placeholder {
     color: #fff; }
     .rwd-menu-anchor i {
       padding-right: 5px; } }
+@media (max-width: 1400px) {
+  .slide {
+    width: 1200px; }
+
+  .header-footer-contact {
+    top: 500px;
+    opacity: 0; }
+
+  .header-footer {
+    height: 100px; }
+
+  .open-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: red;
+    position: relative;
+    top: -15px;
+    float: right;
+    margin-right: 50px;
+    z-index: 223;
+    background-color: #ff007c; }
+    .open-up:hover {
+      cursor: pointer; }
+
+  .fa-chevron-up {
+    position: relative;
+    top: -2px;
+    color: #fff; }
+
+  .header-footer-contact-click {
+    top: 0;
+    opacity: 1; }
+
+  .header-footer-click {
+    height: 350px !important; } }
 
 /*# sourceMappingURL=style.css.map */
