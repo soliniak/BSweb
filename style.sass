@@ -64,7 +64,8 @@ output, ruby, section, summary, time, mark, audio, video, button
 	font-size: 20px
 	padding-top: 50px
 	overflow: hidden
-	ul
+	ul.main-menu
+		transition: all 1s ease-in-out
 		li
 			position: relative
 			span
@@ -205,8 +206,7 @@ output, ruby, section, summary, time, mark, audio, video, button
 .rwd-menu-anchor
 	visibility: hidden
 
-.open-up
-	display: none
+
 
 // --- MENU END
 
@@ -589,11 +589,28 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 @media (max-width: 1400px)			
 	.slide
 		width: 1200px
-	.header-footer-contact
-		top: 500px
-		opacity: 0
+	.appointment-button
+		top: 30px
+	.li-fcontact
+		clear: both
+		width: 100%
+		font-size: 13px
+		margin-bottom: 10px
+		i.fa
+			font-size: 20px
+			left: -10px
+
 	.header-footer
 		height: 100px
+	.header-footer-click
+		height: 450px
+	.header-footer-contact
+		padding-top: 30px
+		opacity: 0
+	.header-footer-contact-click
+		opacity: 1
+	.main-menu-click
+		opacity: 0.1
 	.open-up
 		display: flex
 		align-items: center
@@ -616,7 +633,4 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 		color: #fff
 
 	.header-footer-contact-click
-		top: 0
 		opacity: 1
-	.header-footer-click
-		height: 350px !important

@@ -50,25 +50,27 @@ output, ruby, section, summary, time, mark, audio, video, button {
   font-size: 20px;
   padding-top: 50px;
   overflow: hidden; }
-  .header-menu ul li {
-    position: relative; }
-    .header-menu ul li span a {
-      position: relative;
-      right: 0;
-      text-decoration: none;
-      color: #fff; }
-    .header-menu ul li span a:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      margin: 0 10px 0 0;
-      width: 500px;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.2); }
-    .header-menu ul li span a:hover {
-      right: 10px; }
+  .header-menu ul.main-menu {
+    transition: all 1s ease-in-out; }
+    .header-menu ul.main-menu li {
+      position: relative; }
+      .header-menu ul.main-menu li span a {
+        position: relative;
+        right: 0;
+        text-decoration: none;
+        color: #fff; }
+      .header-menu ul.main-menu li span a:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin: 0 10px 0 0;
+        width: 500px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2); }
+      .header-menu ul.main-menu li span a:hover {
+        right: 10px; }
 
 .header-navigation {
   width: 60%;
@@ -184,9 +186,6 @@ output, ruby, section, summary, time, mark, audio, video, button {
 
 .rwd-menu-anchor {
   visibility: hidden; }
-
-.open-up {
-  display: none; }
 
 .wrapper {
   margin-left: 30%;
@@ -527,12 +526,33 @@ input:focus:-ms-input-placeholder {
   .slide {
     width: 1200px; }
 
-  .header-footer-contact {
-    top: 500px;
-    opacity: 0; }
+  .appointment-button {
+    top: 30px; }
+
+  .li-fcontact {
+    clear: both;
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 10px; }
+    .li-fcontact i.fa {
+      font-size: 20px;
+      left: -10px; }
 
   .header-footer {
     height: 100px; }
+
+  .header-footer-click {
+    height: 450px; }
+
+  .header-footer-contact {
+    padding-top: 30px;
+    opacity: 0; }
+
+  .header-footer-contact-click {
+    opacity: 1; }
+
+  .main-menu-click {
+    opacity: 0.1; }
 
   .open-up {
     display: flex;
@@ -557,10 +577,6 @@ input:focus:-ms-input-placeholder {
     color: #fff; }
 
   .header-footer-contact-click {
-    top: 0;
-    opacity: 1; }
-
-  .header-footer-click {
-    height: 350px !important; } }
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */

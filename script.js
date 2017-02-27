@@ -6,8 +6,10 @@ $(document).ready(function(){
 	});
 
 	$(".open-up").on("click", function(){
-		$(".header-footer-contact").toggle("header-footer-contact-click");
-		$(".header-footer").toggle("header-footer-click");
+		$(".header-footer").toggleClass("header-footer-click");
+		$(".header-footer-contact").toggleClass("header-footer-contact-click");
+		$(".main-menu").toggleClass("main-menu-click");
 	});
+
 
 });	
