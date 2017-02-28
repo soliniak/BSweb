@@ -9,6 +9,7 @@ $(document).ready(function(){
 		$(".header-footer").toggleClass("header-footer-click");
 		$(".header-footer-contact").toggleClass("header-footer-contact-click");
 		$(".main-menu").toggleClass("main-menu-click");
+		$(".open-up").toggleClass("rotate");
 	});
 
 

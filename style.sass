@@ -119,6 +119,9 @@ output, ruby, section, summary, time, mark, audio, video, button
 	align-content: center
 	justify-content: center
 
+.open-up
+	display: none
+
 .appointment-button
 	width: 250px
 	display: flex
@@ -481,7 +484,8 @@ input.input-newsletter:focus
 button:focus
 	outline: 0
 
-
+.rotate
+	transform: rotate(180deg)
 .float-right
 	float: right
 
@@ -559,9 +563,10 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 	#header
 		width: 100%
 		height: 300px
-		position: flex
+		display: block
 	.wrapper
 		margin-left: 0
+		margin-top: 300px
 	.logo
 		padding-bottom: 30px
 		border-bottom: 1px solid rgba(255,255,255,.6)
@@ -571,10 +576,35 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 		width: 100%
 	.header-footer
 		visibility: hidden
+	.header-menu
+		font-size: 20px
+		padding-top: 20px
+		overflow: hidden
+		display: inline-block
+		ul.main-menu
+			li
+				display: inline
+				span
+					a
+						padding: 0 20px
+						text-decoration: none
+						color: #fff
+					a:before
+						display: none
+					a:hover
+						right: 0
+
+
+	.header-navigation
+		width: 100%
+		text-align: center
+		margin: 0 auto
+
 	.rwd-menu-anchor
 		margin-top: 40px
 		visibility: visible
-		display: flex
+		display: none
+		//display: flex
 		align-items: center
 		justify-content: center
 		width: 120px
