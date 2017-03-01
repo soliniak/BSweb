@@ -224,12 +224,11 @@ output, ruby, section, summary, time, mark, audio, video, button {
   border: 0; }
 
 .section-title {
-  display: block;
-  padding-bottom: 10px; }
+  display: block; }
   .section-title em {
     padding-bottom: 5px;
     border-bottom: 1px solid red;
-    border-width: 80%; }
+    width: 80%; }
 
 .baner {
   position: relative;
@@ -412,7 +411,7 @@ h1 {
 input.input-newsletter {
   width: 150px;
   height: 20px;
-  margin-right: 10px;
+  text-align: center;
   font-size: 15px;
   font-style: italic;
   background-color: transparent;
@@ -610,16 +609,12 @@ input:focus:-ms-input-placeholder {
 
   .header-footer-contact-click {
     opacity: 1; } }
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .slide {
-    max-width: 800px; }
+    max-width: 768px; }
 
   .baner {
-    height: 300px; }
-    .baner .baner-description ul li {
-      font-size: 13px; }
-
-  .description {
+    height: 300px;
     font-size: 12px; }
 
   .testimonial .testimonial-content blockquote {
@@ -635,7 +630,8 @@ input:focus:-ms-input-placeholder {
 
   .main-content, .add-padding {
     width: 100%;
-    padding: 0; }
+    padding: 0;
+    padding-top: 10px; }
     .main-content .section-title, .add-padding .section-title, .main-content .description, .add-padding .description {
       padding: 10px; }
 
@@ -651,12 +647,20 @@ input:focus:-ms-input-placeholder {
       width: 100px;
       padding: 2px; } }
 @media (max-width: 800px) {
-  ul.main-menu li span a {
+  .header-menu ul.main-menu li span a {
     font-size: 20px;
     padding: 0 5px; } }
 @media (max-width: 420px) {
   .slide {
     max-width: 420px; }
+
+  #header {
+    height: 100px;
+    padding: 0; }
+
+  .logo {
+    padding-bottom: 0;
+    padding-top: 20px; }
 
   .baner {
     height: 250px; }
@@ -668,6 +672,64 @@ input:focus:-ms-input-placeholder {
         padding: 3px; }
 
   .testimonial .testimonial-content blockquote {
-    font-size: 13px; } }
+    font-size: 13px; }
+
+  .header-menu {
+    padding-top: 0; }
+    .header-menu ul.main-menu li span a {
+      font-size: 13px;
+      padding: 0 5px; }
+
+  .form-fields {
+    width: 300px; }
+
+  .section-title .float-right {
+    float: none; }
+    .section-title .float-right .simple-button {
+      display: block; } }
+@media (max-width: 375px) {
+  .header-menu ul.main-menu li span a {
+    font-size: 12px;
+    padding: 0 3px; }
+
+  .header-menu {
+    padding-top: 0; }
+
+  .form-fields {
+    width: 270px; } }
+@media (max-width: 320px) {
+  .slide {
+    width: 320px; }
+
+  .header-menu {
+    padding-top: 0; }
+    .header-menu ul.main-menu li span a {
+      font-size: 10px;
+      padding: 0 2px; }
+
+  .testimonial .testimonial-content blockquote {
+    padding: 10px; }
+
+  .baner {
+    height: 150px; }
+    .baner .baner-description ul li {
+      font-size: 10px;
+      padding: 0; }
+
+  .newsletter {
+    height: 550px; }
+    .newsletter h3 {
+      margin-right: 15px; }
+    .newsletter .form-fields {
+      height: 50px;
+      width: 250px;
+      display: block;
+      text-align: center;
+      padding: 0;
+      padding-bottom: 50px; }
+      .newsletter .form-fields .input-newsletter {
+        height: 30px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid grey; } }
 
 /*# sourceMappingURL=style.css.map */

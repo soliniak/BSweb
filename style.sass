@@ -249,11 +249,10 @@ output, ruby, section, summary, time, mark, audio, video, button
 
 .section-title
 	display: block
-	padding-bottom: 10px
 	em
 		padding-bottom: 5px
 		border-bottom: 1px solid red
-		border-width: 80%
+		width: 80%
 
 
 // --- TOP SLIDER START
@@ -458,7 +457,8 @@ h1
 input.input-newsletter
 	width: 150px
 	height: 20px
-	margin-right: 10px
+	//margin-right: 10px
+	text-align: center
 	font-size: 15px
 	font-style: italic
 	background-color: transparent
@@ -658,16 +658,13 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 
 // -------- MAX WIDTH 730 zakres od 0 --> 730
 
-@media (max-width:730px)
+@media (max-width:768px)
 	.slide
-		max-width: 800px
+		max-width: 768px
 	.baner
 		height: 300px
 		.baner-description
 			ul
-				li
-					font-size: 13px
-	.description
 		font-size: 12px
 	.testimonial
 		.testimonial-content
@@ -683,6 +680,7 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 	.main-content
 		width: 100%	
 		padding: 0
+		padding-top: 10px
 		.section-title, .description
 			padding: 10px
 	.header-menu
@@ -705,18 +703,24 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 
 @media (max-width:800px)
 	.header-menu
-	ul.main-menu 
-		li 
-			span 
-				a
-					font-size: 20px
-					padding: 0 5px
+		ul.main-menu 
+			li 
+				span 
+					a
+						font-size: 20px
+						padding: 0 5px
 
-// -------- MAX WIDTH 375 zakres od 0 --> 375 (Iphone 6 pionowo)
+// -------- MAX WIDTH 420 zakres od 0 --> 420 (Iphone 6 pionowo)
 
 @media (max-width:420px)
 	.slide
 		max-width: 420px
+	#header
+		height: 100px
+		padding: 0	
+	.logo
+		padding-bottom: 0
+		padding-top: 20px
 	.baner
 		height: 250px	
 		.baner-description
@@ -730,3 +734,81 @@ input:focus:-ms-input-placeholder /* IE 10+ */
 		.testimonial-content
 			blockquote
 				font-size: 13px
+	.header-menu
+		padding-top: 0
+		ul.main-menu 
+			li 
+				span 
+					a
+						font-size: 13px
+						padding: 0 5px
+	.form-fields
+		width: 300px
+	.section-title
+		.float-right
+			float: none
+			.simple-button
+				display: block
+
+// -------- MAX WIDTH 375 zakres od 0 --> 375
+
+@media (max-width:375px)
+	.header-menu
+		ul.main-menu 
+			li 
+				span 
+					a
+						font-size: 12px
+						padding: 0 3px
+
+	.header-menu
+		padding-top: 0
+	.form-fields
+		width: 270px
+		
+// -------- MAX WIDTH 320 zakres od 0 --> 320
+
+@media (max-width:320px)
+	.slide
+		width: 320px
+	.header-menu
+		padding-top: 0
+		ul.main-menu 
+			li 
+				span 
+					a
+						font-size: 10px
+						padding: 0 2px
+	.testimonial 
+		.testimonial-content 
+			blockquote
+				padding: 10px
+	.baner
+		height: 150px
+		.baner-description 
+			ul 
+				li
+					font-size: 10px
+					padding: 0
+	.newsletter
+		height: 550px
+		h3
+			margin-right: 15px
+		.form-fields
+			height: 50px
+			width: 250px
+			display: block
+			text-align: center
+			padding: 0
+			padding-bottom: 50px
+			.input-newsletter
+				height: 30px
+				margin-bottom: 10px
+				border-bottom: 1px solid grey
+
+// Iphone 5 - 320 x 568
+// Iphone 6 - 375 x 667
+// 6 plus 414 x 736
+// Ipad 768 x 1024
+// 1024 x 1366
+
