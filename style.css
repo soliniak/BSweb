@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, .baner-description h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
 var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
 output, ruby, section, summary, time, mark, audio, video, button {
   margin: 0;
@@ -19,6 +19,10 @@ output, ruby, section, summary, time, mark, audio, video, button {
   left: 0;
   overflow: hidden;
   z-index: 1; }
+
+.last {
+  width: 100%;
+  margin-top: 20px; }
 
 #header-bg {
   background-color: rgba(9, 157, 179, 0.5);
@@ -240,11 +244,17 @@ output, ruby, section, summary, time, mark, audio, video, button {
     bottom: 2px;
     background-color: rgba(255, 255, 255, 0.85);
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
-
-.baner-description h1 {
-  padding: 0 15px; }
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px; }
+    .baner .baner-description ul li {
+      font-family: Arial;
+      font-size: 20px;
+      display: inline;
+      padding: 0 20px;
+      font-weight: bold; }
+    .baner .baner-description ul li:nth-child(odd) {
+      color: #ff007c; }
 
 .slides {
   display: block;
@@ -289,13 +299,13 @@ output, ruby, section, summary, time, mark, audio, video, button {
   letter-spacing: 1px;
   text-indent: 50px; }
 
-h1, .baner-description h1 {
+h1 {
   font-family: Tahoma;
   font-weight: bold;
   font-size: 2em;
   display: inline-block;
   margin-bottom: 3px; }
-  h1:before, .baner-description h1:before {
+  h1:before {
     content: "";
     height: 25px;
     width: 8px;
@@ -306,11 +316,6 @@ h1, .baner-description h1 {
   content: "";
   display: block;
   padding-bottom: 20px; }
-
-h3 {
-  font-family: Arial;
-  font-size: 15px;
-  line-height: 21px; }
 
 .testimonial, .full-width-section {
   width: 100%;
@@ -495,18 +500,17 @@ input:focus:-ms-input-placeholder {
 @media (max-width: 1199px) {
   #header {
     width: 100%;
-    height: 300px;
-    display: block; }
+    height: 220px;
+    display: block;
+    position: relative; }
 
   .wrapper {
     margin-left: 0;
-    margin-top: 300px; }
+    margin-top: 0; }
 
   .logo {
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
-    .logo img {
-      height: 50px; }
 
   .header-navigation {
     width: 100%; }
@@ -606,5 +610,64 @@ input:focus:-ms-input-placeholder {
 
   .header-footer-contact-click {
     opacity: 1; } }
+@media (max-width: 730px) {
+  .slide {
+    max-width: 800px; }
+
+  .baner {
+    height: 300px; }
+    .baner .baner-description ul li {
+      font-size: 13px; }
+
+  .description {
+    font-size: 12px; }
+
+  .testimonial .testimonial-content blockquote {
+    font-size: 18px; }
+
+  .newsletter {
+    height: 500px;
+    flex-direction: column;
+    align-items: flex-start; }
+    .newsletter .col {
+      display: block;
+      width: 90%; }
+
+  .main-content, .add-padding {
+    width: 100%;
+    padding: 0; }
+    .main-content .section-title, .add-padding .section-title, .main-content .description, .add-padding .description {
+      padding: 10px; }
+
+  .header-menu ul.main-menu li span a {
+    font-size: 12px;
+    padding: 0 5px; }
+
+  .testimonial-portrait {
+    padding: 5px 10px 5px 0;
+    margin-top: 5px; }
+    .testimonial-portrait span img {
+      height: 100px;
+      width: 100px;
+      padding: 2px; } }
+@media (max-width: 800px) {
+  ul.main-menu li span a {
+    font-size: 20px;
+    padding: 0 5px; } }
+@media (max-width: 420px) {
+  .slide {
+    max-width: 420px; }
+
+  .baner {
+    height: 250px; }
+    .baner .baner-description {
+      height: 30px;
+      bottom: 7px; }
+      .baner .baner-description ul li {
+        font-size: 12px;
+        padding: 3px; }
+
+  .testimonial .testimonial-content blockquote {
+    font-size: 13px; } }
 
 /*# sourceMappingURL=style.css.map */

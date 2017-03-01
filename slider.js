@@ -55,7 +55,16 @@ $(function(){
 	var $leftBtn = $('.gallery-slider-left');
 	var $rightBtn = $('.gallery-slider-right');
 	var $picSection = $sectionSlider.find('.gallery-section');
-	var amount = 4;
+
+	var mq = window.matchMedia( "(max-width: 500px)" );
+	if (mq.matches) {
+	  var amount = 2;
+	  console.log(amount);
+	} else {
+	  var amount = 4;
+	  console.log(amount);
+	}
+
 	var placer = 1;
 	var speed = 500;
 	
